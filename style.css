@@ -45,18 +45,18 @@ body {
 
 h1 {
   margin: 0;
-  max-width: 20ch;
-  font-size: clamp(2rem, 5.6vw, 4.2rem);
+  max-width: 21ch;
+  font-size: clamp(2rem, 5.6vw, 4.1rem);
   line-height: 1.05;
   animation: rise .85s ease both;
 }
 
 .lead {
   margin: 0;
-  max-width: 72ch;
+  max-width: 78ch;
   color: var(--muted);
   line-height: 1.7;
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(1rem, 2vw, 1.17rem);
   animation: rise 1.05s ease both;
 }
 
@@ -120,13 +120,13 @@ h1 {
 }
 
 .panel {
-  width: min(900px, 100%);
-  max-height: min(85vh, 880px);
+  width: min(980px, 100%);
+  max-height: min(90vh, 950px);
   overflow: auto;
   border-radius: 24px;
   border: 1px solid var(--border);
   padding: 1.6rem;
-  background: linear-gradient(170deg, rgba(10, 20, 48, .95), rgba(8, 14, 31, .92));
+  background: linear-gradient(170deg, rgba(10, 20, 48, .96), rgba(8, 14, 31, .94));
   box-shadow: 0 30px 70px rgba(0,0,0,.45);
   transform: translateY(24px) scale(.96);
   opacity: 0;
@@ -161,14 +161,29 @@ h1 {
   font-size: clamp(1.6rem, 4vw, 2.5rem);
 }
 
+.section-title {
+  margin: 1.15rem 0 .65rem;
+  font-size: 1.06rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #dce6ff;
+}
+
 .info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
 }
 
+.info-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
 .info-card,
-.culture-block {
+.culture-block,
+.detail-list {
   border: 1px solid rgba(255,255,255,.16);
   border-radius: 16px;
   padding: 1rem;
@@ -178,13 +193,14 @@ h1 {
 
 .info-card h3,
 .culture-block h3 {
-  margin: 0 0 .5rem;
+  margin: 0 0 .55rem;
   font-size: 1.15rem;
 }
 
 .info-card p,
 .culture-block p,
-.culture-block li {
+.culture-block li,
+.detail-list li {
   margin: 0;
   color: var(--muted);
   line-height: 1.55;
@@ -195,7 +211,8 @@ h1 {
   gap: .9rem;
 }
 
-.culture-block ul {
+.culture-block ul,
+.detail-list {
   margin: 0;
   padding-left: 1.1rem;
   display: grid;
