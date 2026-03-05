@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visitez le Luxembourg</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+
+    <main class="hero">
+      <p class="eyebrow">Bienvenue</p>
+      <h1>Découvrez le Luxembourg</h1>
+      <p class="lead">
+        Un pays élégant au cœur de l'Europe, où châteaux médiévaux, finance
+        internationale, nature verdoyante et qualité de vie exceptionnelle se
+        rencontrent dans un équilibre unique.
+      </p>
+
+      <div class="actions">
+        <button class="fancy-btn" data-panel="info-panel">Info</button>
+        <button class="fancy-btn" data-panel="culture-panel">Culture</button>
+      </div>
+    </main>
+
+    <section class="overlay" id="info-panel" aria-hidden="true">
+      <article class="panel">
+        <button class="close-btn" aria-label="Fermer">×</button>
+        <h2>Informations essentielles</h2>
+        <ul>
+          <li><strong>Capitale :</strong> Ville de Luxembourg</li>
+          <li><strong>Langues officielles :</strong> luxembourgeois, français et allemand</li>
+          <li><strong>Monnaie :</strong> euro (€)</li>
+          <li><strong>Population :</strong> environ 670 000 habitants</li>
+          <li><strong>Système politique :</strong> monarchie constitutionnelle (Grand-Duché)</li>
+          <li><strong>Atout principal :</strong> centre économique, européen et technologique</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="overlay" id="culture-panel" aria-hidden="true">
+      <article class="panel">
+        <button class="close-btn" aria-label="Fermer">×</button>
+        <h2>Culture luxembourgeoise</h2>
+        <ul>
+          <li><strong>Identité multiculturelle :</strong> un mélange d'influences françaises, allemandes et belges.</li>
+          <li><strong>Traditions :</strong> Schueberfouer, Éimaischen et marchés de Noël emblématiques.</li>
+          <li><strong>Gastronomie :</strong> judd mat gaardebounen, bouneschlupp, gromperekichelcher.</li>
+          <li><strong>Patrimoine :</strong> vieux quartiers et fortifications de Luxembourg classés à l'UNESCO.</li>
+          <li><strong>Scène artistique :</strong> musées modernes, concerts, théâtre multilingue et design contemporain.</li>
+          <li><strong>Mode de vie :</strong> importance de la nature, du vélo et du bien-être urbain.</li>
+        </ul>
+      </article>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
