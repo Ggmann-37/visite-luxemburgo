@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Visitez le Luxembourg</title>
+    <title>Luxembourg • Info & Culture</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -17,12 +17,12 @@
     <div class="bg-orb orb-b"></div>
 
     <main class="hero">
-      <p class="eyebrow">Bienvenue</p>
-      <h1>Découvrez le Luxembourg</h1>
+      <p class="eyebrow">Grand-Duché du Luxembourg</p>
+      <h1>Une destination premium entre histoire, gastronomie et traditions vivantes.</h1>
       <p class="lead">
-        Un pays élégant au cœur de l'Europe, où châteaux médiévaux, finance
-        internationale, nature verdoyante et qualité de vie exceptionnelle se
-        rencontrent dans un équilibre unique.
+        Dès l'ouverture, découvrez un aperçu moderne du Luxembourg avec deux accès immersifs:
+        <strong>Info</strong> pour les données essentielles et <strong>Culture</strong> pour les traditions,
+        personnages emblématiques et fêtes populaires extraites des visuels fournis.
       </p>
 
       <div class="actions">
@@ -34,30 +34,63 @@
     <section class="overlay" id="info-panel" aria-hidden="true">
       <article class="panel">
         <button class="close-btn" aria-label="Fermer">×</button>
-        <h2>Informations essentielles</h2>
-        <ul>
-          <li><strong>Capitale :</strong> Ville de Luxembourg</li>
-          <li><strong>Langues officielles :</strong> luxembourgeois, français et allemand</li>
-          <li><strong>Monnaie :</strong> euro (€)</li>
-          <li><strong>Population :</strong> environ 670 000 habitants</li>
-          <li><strong>Système politique :</strong> monarchie constitutionnelle (Grand-Duché)</li>
-          <li><strong>Atout principal :</strong> centre économique, européen et technologique</li>
-        </ul>
+        <p class="panel-tag">PROFESSIONAL | TRAVEL | AGENCY</p>
+        <h2>Informations du Luxembourg</h2>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Localisation</h3>
+            <p>49°48'55.0&quot;N<br />6°07'46.5&quot;E</p>
+          </div>
+          <div class="info-card">
+            <h3>Drapeau du pays</h3>
+            <p>Rouge, blanc et bleu.<br />Créé en 1845.</p>
+          </div>
+          <div class="info-card">
+            <h3>Langues parlées</h3>
+            <p>Luxembourgeois, français et allemand.</p>
+          </div>
+          <div class="info-card">
+            <h3>Plat typique</h3>
+            <p>Le Bouneschlupp (soupe traditionnelle), parmi de nombreux plats locaux.</p>
+          </div>
+        </div>
       </article>
     </section>
 
     <section class="overlay" id="culture-panel" aria-hidden="true">
       <article class="panel">
         <button class="close-btn" aria-label="Fermer">×</button>
+        <p class="panel-tag">PROFESSIONAL | TRAVEL | AGENCY</p>
         <h2>Culture luxembourgeoise</h2>
-        <ul>
-          <li><strong>Identité multiculturelle :</strong> un mélange d'influences françaises, allemandes et belges.</li>
-          <li><strong>Traditions :</strong> Schueberfouer, Éimaischen et marchés de Noël emblématiques.</li>
-          <li><strong>Gastronomie :</strong> judd mat gaardebounen, bouneschlupp, gromperekichelcher.</li>
-          <li><strong>Patrimoine :</strong> vieux quartiers et fortifications de Luxembourg classés à l'UNESCO.</li>
-          <li><strong>Scène artistique :</strong> musées modernes, concerts, théâtre multilingue et design contemporain.</li>
-          <li><strong>Mode de vie :</strong> importance de la nature, du vélo et du bien-être urbain.</li>
-        </ul>
+
+        <div class="culture-stack">
+          <div class="culture-block">
+            <h3>Personnage célèbre — Louis Pilot</h3>
+            <p>
+              Footballeur luxembourgeois (1940–2016), considéré comme l'un des meilleurs joueurs
+              du pays. Il jouait milieu de terrain au Standard de Liège et en équipe nationale du
+              Luxembourg.
+            </p>
+          </div>
+
+          <div class="culture-block">
+            <h3>Fête traditionnelle — Schueberfouer</h3>
+            <ul>
+              <li>Grande fête foraine organisée chaque année à Luxembourg City depuis le XIVe siècle.</li>
+              <li>C'est la fête populaire la plus importante du pays.</li>
+            </ul>
+          </div>
+
+          <div class="culture-block">
+            <h3>Curiosité culturelle — Costume traditionnel</h3>
+            <ul>
+              <li><strong>Eisleker Tracht:</strong> tenue emblématique du patrimoine luxembourgeois.</li>
+              <li><strong>Femmes:</strong> longue robe sombre, tablier et foulard/coiffe sur la tête.</li>
+              <li><strong>Hommes:</strong> chemise blanche, gilet et pantalon sombre.</li>
+            </ul>
+          </div>
+        </div>
       </article>
     </section>
 
