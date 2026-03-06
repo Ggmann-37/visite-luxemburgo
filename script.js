@@ -4,6 +4,7 @@ const gate = document.getElementById("access-gate");
 const gateForm = document.getElementById("gate-form");
 const visitorNameInput = document.getElementById("visitor-name");
 const enterButton = document.getElementById("enter-site");
+const welcomeUser = document.getElementById("welcome-user");
 
 let recaptchaValidated = false;
 
@@ -43,6 +44,10 @@ gateForm.addEventListener("submit", (event) => {
   if (!recaptchaValidated || visitorNameInput.value.trim().length === 0) {
     return;
   }
+
+  const visitorName = visitorNameInput.value.trim();
+  welcomeUser.textContent = `Bonjour ${visitorName}`;
+  welcomeUser.classList.add("visible");
 
   gate.classList.add("hidden");
   document.body.classList.remove("locked");
