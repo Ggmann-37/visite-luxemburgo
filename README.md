@@ -1,6 +1,6 @@
 # visite-luxemburgo
 
-Landing page moderne en français sur le Luxembourg avec animations, panneaux superposés et barre de marque fixe en haut.
+Landing page moderne en français sur le Luxembourg avec animations, panneaux superposés, barre de marque fixe en haut et photo de château en fond.
 
 ## Contenu
 - Barre fixe supérieure avec le logo texte de l'agence **LuxVoyage Agency**.

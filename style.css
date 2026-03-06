@@ -18,9 +18,8 @@ body {
   font-family: "Inter", system-ui, sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at 10% 10%, #203d78 0, transparent 35%),
-    radial-gradient(circle at 90% 90%, #3b1f6f 0, transparent 38%),
-    linear-gradient(145deg, #050813, #0b1227 35%, #111b37 70%, #060a16 100%);
+    linear-gradient(rgba(4, 10, 24, 0.58), rgba(4, 10, 24, 0.7)),
+    url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Vianden_Castle_2024.jpg/1280px-Vianden_Castle_2024.jpg") center / cover no-repeat fixed;
 }
 
 .top-brand {
