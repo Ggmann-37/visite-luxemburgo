@@ -11,8 +11,31 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
-  <body>
+  <body class="locked">
+    <section class="gate" id="access-gate" aria-modal="true" role="dialog" aria-labelledby="gate-title">
+      <div class="gate-card">
+        <h2 id="gate-title">Accès sécurisé</h2>
+        <p>Veuillez saisir votre nom et valider le reCAPTCHA v2 pour accéder au site.</p>
+
+        <form id="gate-form" class="gate-form">
+          <label for="visitor-name">Nom</label>
+          <input id="visitor-name" name="visitor-name" type="text" placeholder="Votre nom" required />
+
+          <div
+            class="g-recaptcha"
+            data-sitekey="6LczkoEsAAAAABz1EUQAZLGBE7SknQlq7LK_nLSF"
+            data-callback="onRecaptchaSuccess"
+            data-expired-callback="onRecaptchaExpired"
+            data-error-callback="onRecaptchaExpired"
+          ></div>
+
+          <button id="enter-site" type="submit" disabled>Entrer</button>
+        </form>
+      </div>
+    </section>
+
     <header class="top-brand" aria-label="Logo de l'agence">
       <div class="brand-wrap">
         <div class="brand-icon">✦</div>
