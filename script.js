@@ -12,6 +12,9 @@ const closeAllPanels = () => {
     overlay.classList.remove("open");
     overlay.setAttribute("aria-hidden", "true");
   });
+
+  document.body.classList.remove("panel-open");
+
   if (!document.body.classList.contains("locked")) {
     document.body.style.overflow = "";
   }
@@ -56,6 +59,7 @@ openButtons.forEach((button) => {
 
     targetPanel.classList.add("open");
     targetPanel.setAttribute("aria-hidden", "false");
+    document.body.classList.add("panel-open");
     document.body.style.overflow = "hidden";
   });
 });
