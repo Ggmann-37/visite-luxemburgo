@@ -6,7 +6,7 @@ const visitorNameInput = document.getElementById("visitor-name");
 const enterButton = document.getElementById("enter-site");
 const welcomeUser = document.getElementById("welcome-user");
 
-let recaptchaValidated = false;
+let recaptchaToken = null;
 
 const closeAllPanels = () => {
   overlays.forEach((overlay) => {
@@ -23,47 +23,76 @@ const closeAllPanels = () => {
 
 const updateEnterButtonState = () => {
   const hasName = visitorNameInput.value.trim().length > 0;
-  enterButton.disabled = !(hasName && recaptchaValidated);
+  enterButton.disabled = !(hasName && recaptchaToken);
 };
 
-window.onRecaptchaSuccess = () => {
-  recaptchaValidated = true;
+window.onRecaptchaSuccess = (token) => {
+  recaptchaToken = token;
   updateEnterButtonState();
 };
 
 window.onRecaptchaExpired = () => {
-  recaptchaValidated = false;
+  recaptchaToken = null;
   updateEnterButtonState();
 };
 
 visitorNameInput.addEventListener("input", updateEnterButtonState);
 
-gateForm.addEventListener("submit", (event) => {
+gateForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  if (!recaptchaValidated || visitorNameInput.value.trim().length === 0) {
+  const visitorName = visitorNameInput.value.trim();
+
+  if (!recaptchaToken || visitorName.length === 0) {
     return;
   }
 
-  const visitorName = visitorNameInput.value.trim();
-  welcomeUser.textContent = `Bonjour ${visitorName}`;
-  welcomeUser.classList.add("visible");
+  try {
 
-  gate.classList.add("hidden");
-  document.body.classList.remove("locked");
-  document.body.style.overflow = "";
+    const response = await fetch("/verify-captcha.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        token: recaptchaToken,
+        name: visitorName
+      })
+    });
+
+    const result = await response.json();
+
+    if (!result.success) {
+      alert("Captcha verification failed");
+      return;
+    }
+
+    welcomeUser.textContent = `Bonjour ${visitorName}`;
+    welcomeUser.classList.add("visible");
+
+    gate.classList.add("hidden");
+    document.body.classList.remove("locked");
+    document.body.style.overflow = "";
+
+  } catch (error) {
+    console.error(error);
+  }
+
 });
 
 openButtons.forEach((button) => {
   button.addEventListener("click", () => {
+
     if (!gate.classList.contains("hidden")) return;
 
     closeAllPanels();
+
     const targetPanel = document.getElementById(button.dataset.panel);
     if (!targetPanel) return;
 
     targetPanel.classList.add("open");
     targetPanel.setAttribute("aria-hidden", "false");
+
     document.body.classList.add("panel-open");
     document.body.style.overflow = "hidden";
   });
