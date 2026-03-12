@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="msvalidate.01" content="E024C69566479FCF0928CF25B7FA31E6" />
+    <title>Luxembourg • Info & Culture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body class="locked">
+    <section class="gate" id="access-gate" aria-modal="true" role="dialog" aria-labelledby="gate-title">
+      <div class="gate-card">
+        <h2 id="gate-title">Accès sécurisé</h2>
+        <p>Veuillez saisir votre nom et valider le reCAPTCHA v2 pour accéder au site.</p>
+
+        <form id="gate-form" class="gate-form">
+          <label for="visitor-name">Nom</label>
+          <input id="visitor-name" name="visitor-name" type="text" placeholder="Votre nom" required />
+
+          <div
+            class="g-recaptcha"
+            data-sitekey="6LczkoEsAAAAABz1EUQAZLGBE7SknQlq7LK_nLSF"
+            data-callback="onRecaptchaSuccess"
+            data-expired-callback="onRecaptchaExpired"
+            data-error-callback="onRecaptchaExpired"
+          ></div>
+
+          <button id="enter-site" type="submit" disabled>Entrer</button>
+        </form>
+      </div>
+    </section>
+
+    <header class="top-brand" aria-label="Logo de l'agence">
+      <div class="brand-wrap">
+        <div class="brand-icon">✦</div>
+        <div class="brand-text">
+          <strong>LuxVoyage</strong>
+          <span>Agency</span>
+        </div>
+      </div>
+      <p class="welcome-user" id="welcome-user" aria-live="polite"></p>
+    </header>
+
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+
+    <main class="hero">
+      <p class="eyebrow">Grand-Duché du Luxembourg</p>
+      <h1>Explorez un Luxembourg moderne, vivant et culturel dès la première seconde.</h1>
+      <p class="lead">
+        Interface premium en français inspirée des visuels fournis. Cliquez sur <strong>Info</strong>
+        pour découvrir les données clés (localisation, drapeau, langues et gastronomie) ou sur
+        <strong>Culture</strong> pour ouvrir une grande fiche culturelle détaillée (Louis Pilot,
+        Schueberfouer, costume traditionnel et curiosités).
+      </p>
+
+      <div class="actions">
+        <button class="fancy-btn" data-panel="info-panel">Info</button>
+        <button class="fancy-btn" data-panel="culture-panel">Culture</button>
+      </div>
+    </main>
+
+    <section class="overlay" id="info-panel" aria-hidden="true">
+      <article class="panel">
+        <button class="close-btn" aria-label="Fermer">×</button>
+        <h2>Informations complètes du Luxembourg</h2>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Localisation officielle</h3>
+            <p>
+              Coordonnées affichées sur les visuels :<br />
+              <strong>49°48'55.0&quot;N</strong><br />
+              <strong>6°07'46.5&quot;E</strong>
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3>Drapeau du pays</h3>
+            <p>
+              Le drapeau luxembourgeois est composé de trois bandes horizontales :
+              <strong>rouge, blanc et bleu</strong>. Dans la maquette, il est mentionné comme créé en
+              <strong>1845</strong>.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3>Langues parlées</h3>
+            <p>
+              Trois langues principales sont mises en avant : <strong>luxembourgeois</strong>,
+              <strong>français</strong> et <strong>allemand</strong>.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3>Plat typique</h3>
+            <p>
+              Le visuel mentionne le <strong>Bouneschlupp</strong> comme plat traditionnel emblématique,
+              au sein d'une gastronomie riche avec de nombreux plats locaux.
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="overlay" id="culture-panel" aria-hidden="true">
+      <article class="panel">
+        <button class="close-btn" aria-label="Fermer">×</button>
+        <h2>Culture luxembourgeoise — version étendue</h2>
+
+        <div class="culture-stack">
+          <div class="culture-block">
+            <h3>Personnage célèbre — Louis Pilot</h3>
+            <p>
+              Louis Pilot (1940–2016) est présenté dans l'image comme le footballeur luxembourgeois
+              le plus marquant de son époque. Milieu de terrain, il a joué au
+              <strong>Standard de Liège</strong> et sous le maillot de l'équipe nationale du
+              Luxembourg. Son nom symbolise l'excellence sportive du pays.
+            </p>
+          </div>
+
+          <div class="culture-block">
+            <h3>Fête très traditionnelle — Schueberfouer</h3>
+            <ul>
+              <li>Grande fête foraine organisée chaque année à Luxembourg City depuis le XIVe siècle.</li>
+              <li>Considérée comme <strong>la fête populaire la plus importante</strong> du pays.</li>
+              <li>Allie patrimoine historique, loisirs, gastronomie et ambiance familiale.</li>
+              <li>Événement central pour les habitants comme pour les voyageurs.</li>
+            </ul>
+          </div>
+
+          <div class="culture-block">
+            <h3>Curiosité culturelle — Costume traditionnel (Eisleker Tracht)</h3>
+            <ul>
+              <li><strong>Eisleker Tracht</strong> : costume patrimonial représentatif de l'identité locale.</li>
+              <li><strong>Femmes</strong> : longue robe sombre, tablier et foulard/coiffe sur la tête.</li>
+              <li><strong>Hommes</strong> : chemise blanche, gilet et pantalon sombre.</li>
+              <li>Ces tenues expriment le lien entre traditions rurales, élégance et transmission.</li>
+            </ul>
+          </div>
+
+          <div class="culture-block">
+            <h3>Ambiance culturelle des affiches</h3>
+            <ul>
+              <li>Présence d'éléments francophones et touristiques premium.</li>
+              <li>Mélange d'architecture historique, paysages d'eau et monuments urbains.</li>
+              <li>Ton visuel : découverte, prestige, exploration et hospitalité.</li>
+              <li>Invitations récurrentes à réserver un séjour et vivre une expérience unique.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
